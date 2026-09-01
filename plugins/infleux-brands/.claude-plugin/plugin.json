@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "infleux-brands",
+  "displayName": "Infleux for Brands",
+  "version": "1.0.0",
+  "description": "Query and manage your Infleux influencer marketing campaigns from Claude. Look up live campaigns and briefings, track clicks, conversions and spend, follow the casting and content-approval queues, and draft pre-campaigns — all against live Infleux data over an OAuth-secured remote MCP server.",
+  "author": {
+    "name": "Infleux",
+    "email": "hello@infleux.co",
+    "url": "https://www.infleux.co"
+  },
+  "homepage": "https://www.infleux.co",
+  "repository": "https://github.com/revmobgithub/infleux-brands-mcp-plugin",
+  "license": "MIT",
+  "keywords": [
+    "infleux",
+    "influencer-marketing",
+    "campaigns",
+    "creator-economy",
+    "marketing-analytics",
+    "advertising",
+    "performance-marketing"
+  ],
+  "mcpServers": "./.mcp.json"
+}

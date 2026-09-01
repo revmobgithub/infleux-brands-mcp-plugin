@@ -1,0 +1,34 @@
+{
+  "name": "infleux",
+  "description": "Official Infleux plugins for Claude Code — connect Claude to the Infleux influencer marketing platform.",
+  "owner": {
+    "name": "Infleux",
+    "email": "hello@infleux.co",
+    "url": "https://www.infleux.co"
+  },
+  "plugins": [
+    {
+      "name": "infleux-brands",
+      "source": "./plugins/infleux-brands",
+      "displayName": "Infleux for Brands",
+      "description": "Query and manage your Infleux influencer marketing campaigns from Claude. Look up live campaigns and briefings, track clicks, conversions and spend, follow the casting and content-approval queues, and draft pre-campaigns — all against live Infleux data over an OAuth-secured remote MCP server.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Infleux",
+        "email": "hello@infleux.co",
+        "url": "https://www.infleux.co"
+      },
+      "homepage": "https://github.com/revmobgithub/infleux-brands-mcp-plugin",
+      "repository": "https://github.com/revmobgithub/infleux-brands-mcp-plugin",
+      "license": "MIT",
+      "category": "productivity",
+      "tags": [
+        "influencer-marketing",
+        "campaigns",
+        "analytics",
+        "marketing",
+        "advertising"
+      ]
+    }
+  ]
+}
