@@ -119,6 +119,117 @@ O diretório vai referenciar o plugin como um `git-subdir` — repositório + ca
 
 ---
 
+## 3.1 Descrição e casos de uso (texto pronto para o formulário)
+
+O formulário pede descrição e recursos principais. Os blocos abaixo estão em inglês
+porque o diretório é global — copie como estão. Eles batem com o `description` do
+`plugin.json` e com o README; se alterar um, alinhe os três.
+
+### Descrição curta (uma linha, ~120 caracteres)
+
+> Run your Infleux influencer marketing campaigns from Claude — live campaigns,
+> performance, approvals and drafts.
+
+### Descrição (campo principal do formulário)
+
+> **Infleux for Brands** connects Claude to the [Infleux](https://www.infleux.co)
+> influencer marketing platform, so brands and their agencies can work with live campaign
+> data in conversation instead of clicking through dashboards.
+>
+> Ask which campaigns are running and what they pay, pull a performance read-out with
+> clicks, conversions and spend for any period, inspect where traffic is coming from,
+> check what is waiting on your approval, and draft the next edition of a campaign — all
+> against the same live data the Infleux dashboard shows.
+>
+> Authentication is OAuth 2.0 with your existing Infleux account: no tokens to copy, no
+> config to edit. What you can see is scoped server-side to your Infleux role. Every write
+> requires an explicit confirmation after a preview; everything else is read-only.
+>
+> Requires an Infleux account. Talk to your Infleux account manager if you do not have one.
+
+### Principais recursos
+
+> - **Campaign visibility** — live campaigns per brand with window, payout and conversion
+>   model; full briefing and rules for any campaign.
+> - **Performance analysis** — clicks, conversions and spend for a period, read as a funnel
+>   (views → creators running → clicks → conversions → spend) so a drop can be traced to
+>   where it started.
+> - **Traffic quality** — click-origin breakdown by city, IP, user agent and day, to review
+>   suspicious patterns; geo ranking of the creators driving traffic from a region.
+> - **Tracking diagnostics** — per-link clicks, conversions and skipped conversions, for
+>   confirming a campaign link fires end to end.
+> - **Budget and spend** — spend by brand, campaign or period, against the monthly budget
+>   it runs on.
+> - **Approval queues** — creators awaiting brand review and content awaiting review,
+>   grouped by campaign and ordered by age (read-only; decisions stay in the dashboard).
+> - **Pre-campaign drafting** — clone a published campaign into a new draft, edit briefing,
+>   payouts and content rules, always behind a preview-then-confirm gate.
+> - **Four commands** — `/infleux-status`, `/infleux-campaigns`, `/infleux-performance`,
+>   `/infleux-pending` — plus three skills Claude loads on its own and a read-only analyst
+>   agent for multi-step questions.
+> - **No executables** — the plugin is a manifest, an MCP server URL and Markdown. No
+>   scripts, no hooks, no bundled binaries.
+
+### Casos de uso
+
+Exemplos concretos, com o que o plugin faz em cada um. Bons para o campo de casos de uso
+do formulário e para o material de onboarding dos parceiros.
+
+> **1. Morning check on what is live**
+> *"Which campaigns is Acme running right now, and what do they pay?"*
+> Resolves the brand, lists live campaigns with window, payout and conversion type, and
+> flags when more results exist than were shown.
+>
+> **2. Monthly performance review**
+> *"How did the September campaign perform — clicks, conversions and spend?"*
+> Reads the campaign's conversion model, pulls active creators, click analytics and spend
+> for the period, and returns a headline, a metrics table, and where in the funnel the
+> movement started.
+>
+> **3. Traffic quality review**
+> *"Where are the clicks on this campaign coming from? Anything that looks off?"*
+> Breaks clicks down by city, IP, user agent and day, and flags concentration patterns as
+> signals to review — never as a fraud verdict.
+>
+> **4. Tracking debug before a launch**
+> *"I clicked the test link an hour ago — did the conversion land?"*
+> Aggregates clicks, conversions and skipped conversions for that one tracked link, so a
+> broken postback is separated from a creator who is not driving traffic.
+>
+> **5. Weekly approval triage**
+> *"What is waiting on us this week?"*
+> Lists creators awaiting brand approval and content awaiting review, grouped by campaign,
+> oldest first, plus drafts still pending launch.
+>
+> **6. Relaunching a campaign**
+> *"Run last month's campaign again in October."*
+> Clones the published campaign into a pending pre-campaign, asks for the new start and end
+> dates (the clone never copies dates), shows the full preview, and only writes after an
+> explicit yes.
+>
+> **7. Budget tracking**
+> *"How much has this brand spent this month, and against what budget?"*
+> Resolves the advertiser/brand pair, queries spend for the period, and puts it next to the
+> monthly budget it runs against.
+
+### Público-alvo e pré-requisitos
+
+> **Who it is for:** brands, advertisers and agencies running influencer campaigns on
+> Infleux, plus the Infleux team.
+> **Requirements:** an Infleux platform account. The plugin installs without one, but every
+> tool call is authenticated and authorized server-side — without an account there is no
+> data access.
+
+### Privacidade e dados (se o formulário perguntar)
+
+> Data stays within the authenticated user's own permissions. A brand account reads its
+> campaigns, castings, approval queues, actions, budgets, spend and click analytics, and
+> can draft pre-campaigns. Influencer profile data and creator earnings are not accessible
+> to brand accounts — those tools are rejected server-side by scope. Credentials are held
+> by Claude Code's secure storage via OAuth; nothing is stored in the plugin repository.
+
+---
+
 ## 4. O que a revisão olha
 
 A Anthropic avalia plugins externos por qualidade e segurança. O que costuma reprovar,
