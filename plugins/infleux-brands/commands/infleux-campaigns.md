@@ -1,6 +1,6 @@
 ---
 description: List the live Infleux campaigns for a brand, with window, payout and conversion model.
-argument-hint: [brand name] (omit for all live campaigns)
+argument-hint: "[brand name] (omit for all live campaigns)"
 ---
 
 List live Infleux campaigns for: **$ARGUMENTS**

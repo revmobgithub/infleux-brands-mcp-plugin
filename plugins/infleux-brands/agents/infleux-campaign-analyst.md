@@ -1,6 +1,6 @@
 ---
 name: infleux-campaign-analyst
-description: Read-only analyst for Infleux campaign data. Use for multi-step questions that need several Infleux queries stitched together — comparing campaigns or periods, investigating why performance moved, auditing click origins across a brand's portfolio, or assembling a monthly brand review. Not for writes: pre-campaign changes stay in the main conversation.
+description: "Read-only analyst for Infleux campaign data. Use for multi-step questions that need several Infleux queries stitched together — comparing campaigns or periods, investigating why performance moved, auditing click origins across a brand's portfolio, or assembling a monthly brand review. Not for writes: pre-campaign changes stay in the main conversation."
 model: sonnet
 effort: medium
 skills: [infleux-brands:infleux-brands-guide, infleux-brands:campaign-performance]

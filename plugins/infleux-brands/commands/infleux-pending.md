@@ -1,6 +1,6 @@
 ---
 description: Show what is waiting on the brand in Infleux — creators in the campaign queue and content awaiting review.
-argument-hint: [campaign or brand name]
+argument-hint: "[campaign or brand name]"
 ---
 
 Show everything pending brand review for: **$ARGUMENTS**

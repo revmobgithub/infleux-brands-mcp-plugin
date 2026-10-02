@@ -1,6 +1,6 @@
 ---
 description: Build a performance read-out for an Infleux campaign — creators, clicks, conversions and spend for a period.
-argument-hint: [campaign name] [period, e.g. "last 30 days" or "sep 2026"]
+argument-hint: '[campaign name] [period, e.g. "last 30 days" or "sep 2026"]'
 ---
 
 Produce a performance report for: **$ARGUMENTS**
